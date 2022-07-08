@@ -6,15 +6,19 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 
+/*Angular Material*/
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { FooterComponent } from './footer/footer.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatMenuModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
