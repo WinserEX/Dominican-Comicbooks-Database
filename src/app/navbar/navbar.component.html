@@ -3,7 +3,7 @@
         <span>Comics Dominicanos</span>
         <span class="example-spacer"></span>
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-            <mat-icon>share</mat-icon>
+            <mat-icon *ngIf="router.url !== '/login'" routerLink="/login">logout</mat-icon>
         </button>
     </mat-toolbar>
 </p>

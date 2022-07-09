@@ -4,11 +4,13 @@ import { ComicbooksComponent } from './comicbooks/comicbooks.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/comicbooks', pathMatch: 'full' },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'comicbooks', component: ComicbooksComponent },
-  { path: 'nosotros', component: NosotrosComponent }
+  { path: 'nosotros', component: NosotrosComponent },
+  { path: 'login', component:  LoginComponent}
 ];
 
 @NgModule({

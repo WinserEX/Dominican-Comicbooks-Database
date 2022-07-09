@@ -19,6 +19,8 @@ import { ComicbooksComponent } from './comicbooks/comicbooks.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import {MatCardModule} from '@angular/material/card';
 import { LoginComponent } from './login/login.component';
+import {MatCommonModule} from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { LoginComponent } from './login/login.component';
     MatMenuModule,
     HttpClientModule,
     HttpClientModule,
+    MatCommonModule,
+    MatInputModule,
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
