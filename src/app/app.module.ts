@@ -16,6 +16,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './footer/footer.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { ComicbooksComponent } from './comicbooks/comicbooks.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
+import {MatCardModule} from '@angular/material/card';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -23,7 +26,9 @@ import { ComicbooksComponent } from './comicbooks/comicbooks.component';
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    ComicbooksComponent
+    ComicbooksComponent,
+    NosotrosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +46,7 @@ import { ComicbooksComponent } from './comicbooks/comicbooks.component';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
