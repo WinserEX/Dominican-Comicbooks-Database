@@ -1,26 +1,27 @@
 <ul class="comics">
-    <p *ngFor="let comicbook of comicbooks">
-      <a>
-        <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>{{comicbook.title}}</mat-card-title>
-              <mat-card-subtitle>{{comicbook.author}}</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://i0.wp.com/remolacha.net/wp-content/uploads/2014/12/15702941119_00e58f0b81_o.jpg?fit=1280%2C1024&ssl=1" alt="Photo of a Shiba Inu">
-            <mat-card-content>
-              <p>
-                {{comicbook.description}}
-              </p>
-            </mat-card-content>
-            <!--<mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>-->
-          </mat-card>
-      </a>
-      <!-- <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button> -->
+    <div *ngFor="let dominicancomic of dominicancomics | async">
+        <a>
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{dominicancomic.title}}</mat-card-title>
+                  <mat-card-subtitle>{{dominicancomic.author}}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="https://i0.wp.com/remolacha.net/wp-content/uploads/2014/12/15702941119_00e58f0b81_o.jpg?fit=1280%2C1024&ssl=1" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                  <p>
+                    {{dominicancomic.description}}
+                  </p>
+                </mat-card-content>
+              </mat-card>
+          </a>
+    </div>    
+
+    <p>
+        {{dominicancomics}}
     </p>
+      
+      <!-- <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button> -->
+    
 </ul>
 
-  <!-- [routerLink]="['/detail', comicbook.id]" -->

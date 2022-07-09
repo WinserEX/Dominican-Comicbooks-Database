@@ -102,6 +102,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "base-de-datos-comic-dominicano:build:production",
+            "firebaseProject": "comicbook-database-3db48",
+            "firebaseHostingSite": "comicbook-database-3db48"
+          }
         }
       }
     }

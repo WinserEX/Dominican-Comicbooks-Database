@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "comicbook-database-3db48": {
+      "hosting": {
+        "base-de-datos-comic-dominicano": [
+          "comicbook-database-3db48"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "comicbook-database-3db48"
+  }
+}

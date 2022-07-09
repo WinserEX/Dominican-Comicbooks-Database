@@ -8,19 +8,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ComicbooksComponent } from './comicbooks/comicbooks.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 /*Angular Material*/
+import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCommonModule} from '@angular/material/core';
+import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import { FooterComponent } from './footer/footer.component';
-import {MatMenuModule} from '@angular/material/menu';
-import { ComicbooksComponent } from './comicbooks/comicbooks.component';
-import { NosotrosComponent } from './nosotros/nosotros.component';
-import {MatCardModule} from '@angular/material/card';
-import { LoginComponent } from './login/login.component';
-import {MatCommonModule} from '@angular/material/core';
-import {MatInputModule} from '@angular/material/input';
+
+/*Extra */
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAnalytics, getAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
+import { providePerformance, getPerformance } from '@angular/fire/performance';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment';
+import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics'
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+
 
 
 @NgModule({
@@ -34,6 +44,7 @@ import {MatInputModule} from '@angular/material/input';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -50,9 +61,14 @@ import {MatInputModule} from '@angular/material/input';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    MatCardModule
+    MatCardModule,
+    AngularFireAnalyticsModule,
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService,UserTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
