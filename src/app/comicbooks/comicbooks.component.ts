@@ -5,6 +5,7 @@ import { ComicbookService } from '../comicbook.service';
 import { MessageService } from '../message.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
+import { NgStyle } from '@angular/common';
 
 
 @Component({
@@ -15,16 +16,18 @@ import { Observable } from 'rxjs';
 
 export class ComicbooksComponent implements OnInit {
   dominicancomics: Observable<any[]>;
-    
+
+      
 
   constructor(private comicbookService: ComicbookService, firestore: AngularFirestore) { 
     this.dominicancomics = firestore.collection('dominicancomics').valueChanges();
   }
 
   ngOnInit(): void {
-    // this.getComics();
+    // this.getComics(); 
 
   }
+
 
 
   // getComics(): void {

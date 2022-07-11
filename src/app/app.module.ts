@@ -63,7 +63,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     ),
     MatCardModule,
     AngularFireAnalyticsModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
   ],
   providers: [
     ScreenTrackingService,UserTrackingService
