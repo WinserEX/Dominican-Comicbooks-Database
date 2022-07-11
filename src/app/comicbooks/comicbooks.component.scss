@@ -12,3 +12,9 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .maincontainer {
+    min-height: 100%;
+    margin: 10px;
+    scroll-behavior: smooth;
+  }

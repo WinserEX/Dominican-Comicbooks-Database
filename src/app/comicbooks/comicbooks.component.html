@@ -1,26 +1,24 @@
-<ul class="comics">
-  <div class="container">
-    <div *ngFor="let dominicancomic of dominicancomics | async">
-          <ng-container>
-              <mat-card class="example-card">
-                  <mat-card-header>
-                    <div mat-card-avatar class="example-header-image"></div>
-                    <mat-card-title>{{dominicancomic.title}}</mat-card-title>
-                    <mat-card-subtitle>{{dominicancomic.name}}</mat-card-subtitle>
-                  </mat-card-header>
-                  <img mat-card-image src="{{dominicancomic.comicimg}}" alt="Photo of a Shiba Inu">
-                  <mat-card-content>
-                    <p>
-                      {{dominicancomic.description}}
-                    </p>
-                  </mat-card-content>
-                </mat-card>
+<div class="maincontainer">
+  <ul class="comics">
+    <div class="container">
+      <div *ngFor="let dominicancomic of dominicancomics | async">
+            <ng-container>
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>{{dominicancomic.title}}</mat-card-title>
+                      <mat-card-subtitle>{{dominicancomic.name}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="{{dominicancomic.comicimg}}" alt="Photo of Comicbook">
+                    <mat-card-content>
+                      <p>
+                        {{dominicancomic.description}}
+                      </p>
+                    </mat-card-content>
+                  </mat-card>
             </ng-container>
       </div>   
-  </div>  
-    
-      
-      <!-- <button type="button" class="delete" title="delete hero" (click)="delete(hero)">x</button> -->
-    
-</ul>
+    </div>      
+  </ul>
+</div>
 
