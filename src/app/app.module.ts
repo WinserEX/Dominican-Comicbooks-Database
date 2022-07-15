@@ -30,7 +30,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
 import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics'
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -64,6 +64,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     MatCardModule,
     AngularFireAnalyticsModule,
     AngularFirestoreModule,
+    FormsModule
   ],
   providers: [
     ScreenTrackingService,UserTrackingService

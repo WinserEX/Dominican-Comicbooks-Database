@@ -1,11 +1,16 @@
 <div class="container">    
     <form class="example-form">
         <table class="example-full-width" cellspacing="0">
+            <tr class="containerF">
+                <td>
+                    <img src="https://comicdominicano.com/wp-content/uploads/2019/11/CulturaComicLogo-WP.png" alt="" >
+                </td>
+            </tr>
             <tr>
                 <td>
                     <mat-form-field class="example-full-width" appearance="fill">
-                        <mat-label>User Name</mat-label>
-                        <input matInput>
+                        <mat-label >User Name</mat-label>
+                        <input matInput name="email" [(ngModel)]="user.email">
                     </mat-form-field>
                 </td>
         </table>
@@ -14,12 +19,18 @@
                 <td>
                     <mat-form-field class="example-full-width" appearance="fill">
                         <mat-label>Password</mat-label>
-                        <input matInput type="password">
+                        <input matInput name="password" type="password" [(ngModel)]="user.password">
                     </mat-form-field>
                 </td>
             </tr>
         </table>
     </form>
-    <button routerLink="/comicbooks" mat-raised-button color="accent">login</button>
+    <button mat-raised-button color="accent" (click)="Login()">login</button>
+    <button mat-raised-button color="accent" (click)="LoginWithGoogle()">login with Google</button>
+    <label class="label">¿Aún no tienes cuenta? <a href="" (click)="Register()">Regístrate</a></label>
+    <div class="containerF">
+        <button mat-raised-button color="accent" (click)="getUserLogged()">Usuario Logeado</button>
+        <button mat-raised-button color="accent" (click)="logout()">logout</button>
+    </div>
 </div>    
   
