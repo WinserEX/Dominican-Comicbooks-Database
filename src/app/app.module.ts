@@ -31,6 +31,7 @@ import { environment } from '../environments/environment';
 import {AngularFireAnalyticsModule} from '@angular/fire/compat/analytics'
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     ComicbooksComponent,
     NosotrosComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

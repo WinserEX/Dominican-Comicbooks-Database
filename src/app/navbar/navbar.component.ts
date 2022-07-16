@@ -9,11 +9,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  userLogged = this.authService.getUserLogged();
+  userLogged = this.AuthService.getUserLogged();
 
-  constructor(public router: Router, private authService: AuthService) { }
-
+  constructor(public router: Router, private AuthService: AuthService) { }
+  
   ngOnInit(): void {
+  }
+
+  logout() {
+    this.AuthService.logout();  
   }
 
 }

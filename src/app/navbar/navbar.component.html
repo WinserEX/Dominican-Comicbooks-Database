@@ -2,10 +2,12 @@
     <mat-toolbar>
         <span>Comics Dominicanos</span>
         <span class="example-spacer"></span>
-        <span class="userbar" *ngIf="userLogged | async as user">{{user.email}}</span>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-            <mat-icon *ngIf="router.url !== '/login'" routerLink="/login">logout</mat-icon>
-        </button>
+        <div *ngIf="userLogged | async as user">
+            <span class="userbar" >{{user.email}}</span>
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                <mat-icon (click)="logout()" routerLink="/login">logout</mat-icon>
+            </button>
+        </div>    
     </mat-toolbar>
 </p>
 
