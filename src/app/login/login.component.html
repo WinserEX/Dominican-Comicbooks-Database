@@ -1,5 +1,5 @@
 <div class="container">    
-    <form class="example-form">
+    <form class="example-form aContainer">
         <table class="example-full-width" cellspacing="0">
             <tr class="containerF">
                 <td>
@@ -9,10 +9,11 @@
             <tr>
                 <td>
                     <mat-form-field class="example-full-width" appearance="fill">
-                        <mat-label >User Name</mat-label>
+                        <mat-label>User Name</mat-label>
                         <input matInput name="email" [(ngModel)]="user.email">
                     </mat-form-field>
                 </td>
+            </tr>
         </table>
         <table class="example-full-width" cellspacing="0">
             <tr>
@@ -23,13 +24,31 @@
                     </mat-form-field>
                 </td>
             </tr>
+            <div class="fl">
+                <tr>
+                    <td>
+                        <button mat-raised-button color="accent" (click)="Login()" routerLink="/comicbooks">login</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button mat-raised-button color="accent" (click)="LoginWithGoogle()" routerLink="/comicbooks">Ingresar con Google</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class="label">¿Aún no tienes cuenta? <a routerLink="/registro">Regístrate</a></label>
+                    </td>
+                </tr>
+            </div>    
         </table>
-    </form>
-    <button mat-raised-button color="accent" (click)="Login()" routerLink="/comicbooks">login</button>
-    <button mat-raised-button color="accent" (click)="LoginWithGoogle()" routerLink="/comicbooks">Ingresar con Google</button>
-    <label class="label">¿Aún no tienes cuenta? <a routerLink="/registro">Regístrate</a></label>
-    <div class="containerF">
+        
+    
+    
+    <!-- <div class="containerF">
         <button mat-raised-button color="accent" (click)="getUserLogged()" routerLink="/comicbooks">Usuario Logeado</button>
-    </div>
+    </div> -->
+    </form>
+    
 </div>    
   
